@@ -1,1 +1,2 @@
-Archivo de prueba
+//Archivo de prueba
+const Hola mundo = (Sufrimiento);
