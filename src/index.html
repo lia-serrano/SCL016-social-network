@@ -18,12 +18,14 @@
     <ul></ul>
   </nav>
   <h1>BIENVENIDOS</h1>
-  <input type="email" id="email" placeholder="Ingresa tu correo" />
-  <input type="password" id="password" placeholder="Contraseña" />
-  <button onclick="enter()">Ingresar</button>
-  <button onclick="check()">Regístrate</button>
-  <img src="img/google-logo.png">
-  <h1 id="login"></h1>
+  <section class="login">
+    <input type="email" id="email" placeholder="Ingresa tu correo" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="enter()">Ingresar</button>
+    <button onclick="check()">Regístrate</button>
+    <img src="img/google-logo.png" class="google">
+    <h1 id="login"></h1>
+  </section>
 
   <script type="module" src="main.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -94,7 +96,7 @@
             console.log(errorCode);
             console.log(errorMessage);
           });*/
-      };
+    };
   </script>
 </body>
 

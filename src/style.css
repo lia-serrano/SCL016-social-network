@@ -1,14 +1,32 @@
 body {
-background: linear-gradient(158.75deg, rgba(255, 255, 255, 0.7) 39.06%, rgba(255, 252, 169, 0.175) 100%) #FFFCA9;
+background: linear-gradient(158.75deg, rgba(255, 255, 255, 0.7) 39.06%, rgba(255, 252, 169, 0.5) 100%);
 /*background: -prefix-linear-gradient(left top, blue, white);*/
+background-repeat: no-repeat;
 }
 
 .logo {
-display: flex;
-justify-content: center;
-align-items: flex-start;
-width: 80vw;
-height: 35vh;
+display: block;
+margin: auto;
+width: 45vw;
+height: 25vh;
 }
 
+h1{
+text-align: center;
+}
 
+.login  {
+display: flex;
+margin: auto;
+flex-direction: column;
+text-align-last: center;
+width: 15vw;
+row-gap: 10px;
+}
+
+.login > .google {
+cursor: pointer;
+align-self: center;
+width: 20%;
+height: 20%;
+}
