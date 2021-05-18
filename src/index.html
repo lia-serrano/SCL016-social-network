@@ -5,20 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css">
   <title>Social Food's</title>
 </head>
 
 <body>
   <header>
-    <img  class="logo">
+    <img class="logo" src="img/logo.png">
   </header>
   <nav>
     <ul></ul>
     <ul></ul>
   </nav>
+  <h1>BIENVENIDOS</h1>
   <input type="email" id="email" placeholder="Ingresa tu correo" />
   <input type="password" id="password" placeholder="Contraseña" />
-  <button onclick="ingresar()">Ingresar</button>
+  <button onclick="enter()">Ingresar</button>
+  <button onclick="check()">Regístrate</button>
+  <img src="img/google-logo.png">
+  <h1 id="login"></h1>
 
   <script type="module" src="main.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -40,25 +45,56 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    const ingresar = () => {
-      let email=document.getElementById("email").value;
-      let password=document.getElementById("password").value;
-      //alert("email="+email+"password="+password);//
-    
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Signed in
-        var user = userCredential.user;
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        var uid = user.uid;
+        document.getElementById("login").innerHTML = "Sesión iniciada correctamente " + user.email;
+      } else {
+        document.getElementById("login").innerHTML = "Los datos ingresados no son válidos ";
+        // User is signed out
         // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage);
-        console.log(errorCode);
-        console.log(errorMessage);
-      }); 
-    };
+      }
+    });
+
+    const enter = () => {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      //alert("email="+email+"password="+password);//
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Signed in
+          var user = userCredential.user;
+          // ...
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert(errorMessage);
+        });
+
+      /*Registro de usuarios nuevos
+      const enter = () => {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        //alert("email="+email+"password="+password);//
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // Signed in
+            var user = userCredential.user;
+            // ...
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            //alert(errorMessage);//
+            console.log(errorCode);
+            console.log(errorMessage);
+          });*/
+      };
   </script>
 </body>
 

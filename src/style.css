@@ -1,0 +1,14 @@
+body {
+background: linear-gradient(158.75deg, rgba(255, 255, 255, 0.7) 39.06%, rgba(255, 252, 169, 0.175) 100%) #FFFCA9;
+/*background: -prefix-linear-gradient(left top, blue, white);*/
+}
+
+.logo {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+width: 80vw;
+height: 35vh;
+}
+
+
