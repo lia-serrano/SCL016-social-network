@@ -1,5 +1,15 @@
 // Este es el punto de entrada de tu aplicacion
 
-import { myFunction } from './lib/index.js';
+import { homeTemp } from './templates/home.js';
+import { changeRouter } from './router.js';
 
-myFunction();
+const start = () => {
+  document.getElementById('root').appendChild(homeTemp());
+
+  window.addEventListener('hashChange', () => {
+    /* myFunction(); */
+    changeRouter(window.location.hash);
+  });
+};
+
+window.addEventListener('load', start);
