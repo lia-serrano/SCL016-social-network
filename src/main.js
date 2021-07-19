@@ -6,7 +6,7 @@ import { changeRouter } from './router.js';
 const start = () => {
   document.getElementById('root').appendChild(homeTemp());
 
-  window.addEventListener('hashChange', () => {
+  window.addEventListener('hashchange', () => {
     /* myFunction(); */
     changeRouter(window.location.hash);
   });

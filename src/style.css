@@ -1,0 +1,132 @@
+html {
+  width: 265px;
+  height: 425px;
+  
+  background: linear-gradient(158.75deg, rgba(255, 255, 255, 0.7) 39.06%, rgba(255, 252, 169, 0.719) 100%);
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 256px;
+  height: 91px;
+  left: 4px;
+  top: -2px;
+}
+
+h1 {
+  width: 145px;
+  height: 26px;
+  left: 60px;
+  top: 105px;
+
+  font-family: Sanchez;
+  font-size: 20px;
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+#emailEntry, #passEntry, #nameCreate, #emailCreate, #passCreate {
+  width: 216px;
+  height: 28px;
+  left: 24px;
+  top: 150px;
+
+  background: rgba(119, 116, 116, 0.2);
+  border-radius: 5px;
+}
+
+#btnGoogle {
+  width: 52px;
+  height: 52px;
+  left: 106px;
+  top: 349px;
+}
+
+#createAccount {
+  width: 76px;
+  height: 22px;
+  left: 94px;
+  top: 281px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+}
+
+h2 {
+  width: 86px;
+  height: 20px;
+  left: 90px;
+  top: 89px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+#postText {
+  width: 220px;
+  height: 70px;
+  left: 23px;
+  top: 73px;
+  background: rgba(119, 116, 116, 0.2);
+  border-radius: 5px;
+}
+
+p {
+  width: 100%;
+  background: rgba(119, 116, 116, 0.2);
+  border-radius: 5px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 9px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+#homeMain, #postMain, #accountMain {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 40px;
+}
+
+#startHome, #startPost, #starAccount {
+  grid-column: 1/3;
+  grid-row: 1/1;
+}
+
+#centerHome, #centerPost, #centerAccount {
+  grid-column: 1/3;
+  grid-row: 2/2;
+}
+
+#endHome {
+  grid-column: 2/2;
+  grid-row: 3/3;
+}
+
+#public {
+  grid-column: 2/2;
+  grid-row: 3/3;
+}
